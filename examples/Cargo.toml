@@ -1,0 +1,16 @@
+[package]
+name = "examples"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[dev-dependencies]
+group-communication-middleware = { path = "../group-communication-middleware" }
+tokio = { version = "1.32.0", features = ["full"] }
+clap = { version = "4.4.3", features = ["derive"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
+
+[[example]]
+name = "send_receive"
+path = "src/send_receive.rs"
